@@ -1,4 +1,4 @@
-# ✈️ Airline Booking System – Data Dictionary
+# ✈️ Airport and Airline Management System – Data Dictionary
 
 ## Airports
 
