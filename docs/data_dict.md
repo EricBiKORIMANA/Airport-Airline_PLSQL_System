@@ -234,7 +234,7 @@ END;
 
 ```sql
 BEGIN
-    airport_mgmt_pkg.cancel_booking(p_booking_id => 1);
+    airport_mgmt_pkg.cancel_booking(1);
 END;
 ```
 
@@ -307,7 +307,7 @@ CURSOR flight_cursor IS
 
 ```sql
 BEGIN
-    airport_mgmt_pkg.list_flights_from_airport(p_airport_id => 1);
+    airport_mgmt_pkg.list_flights_from_airport(1);
 END;
 ```
 
@@ -356,7 +356,7 @@ END;
 
 ```sql
 BEGIN
-    airport_mgmt_pkg.show_upcoming_flights(p_airport_id => 1);
+    airport_mgmt_pkg.show_upcoming_flights(1);
 END;
 ```
 
@@ -388,7 +388,7 @@ END;
 
 ```sql
 BEGIN
-    airport_mgmt_pkg.show_flight_passengers(p_flight_id => 1);
+    airport_mgmt_pkg.show_flight_passengers(1);
 END;
 ```
 
