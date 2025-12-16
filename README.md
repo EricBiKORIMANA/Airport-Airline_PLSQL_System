@@ -2,15 +2,15 @@
 
 # PL/SQL Oracle Database Capstone Project
 
-****ID:** 27928
-**Name:** Eric BIKORIMANA**
+**ID:** 27928 
+**Name:** Eric BIKORIMANA 
 
-**Course Details:**
-**Course:** INSY 8311 - Database Development with PL/SQL
-**University:** Adventist University of Central Africa
-**Academic Year:** 2025-2026, SEM II
-**Group:** D on  Thursday
-****Instructor:** Eric Maniraguha**
+**Course Details:**   
+**Course:** INSY 8311 - Database Development with PL/SQL   
+**University:** Adventist University of Central Africa   
+**Academic Year:** 2025-2026, SEM I   
+**Group:** D on  Thursday   
+**Instructor:** Eric Maniraguha   
 
 ## Project Details:
 
