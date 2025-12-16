@@ -45,13 +45,14 @@ Airport operations require managing complex relationships between flights, passe
 
 ### ER Diagram
 
-This Entity-Relationship (ER) Diagram represents the conceptual data model for an Airport and Airline Management System. The system is designed to track and manage all aspects of air travel, including airlines, aircraft, flights, airports, bookings, passengers, and tickets.
+This Entity-Relationship (ER) Diagram represents the conceptual data model for an Airport and Airline Management System. The system is designed to track and manage all aspects of air travel, including airlines, aircraft, flights, airports, bookings, passengers, and tickets. 
+[Here](docs/data_dict.md) for more description
 
 ![ER diagram](images/ER_Diagram.png)
 
 ### Database schema
 
-This diagram represents the Physical Database Schema for the Airport and Airline Management System, which is implemented using an Oracle database and managed extensively via PL/SQL stored procedures, functions, and triggers.
+This diagram represents the Physical Database Schema for the Airport and Airline Management System, which is implemented using an Oracle database and managed extensively via PL/SQL stored procedures, functions, and triggers. [Here](docs/data_dict.md) for data dictionary.
 
 ![Database schema diagram](images/Database_Schema.png)
 
