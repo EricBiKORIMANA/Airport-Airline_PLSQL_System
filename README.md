@@ -2,6 +2,8 @@
 
 # PL/SQL Oracle Database Capstone Project
 
+## 👤 Identification
+
 **ID:** 27928     
 **Name:** Eric BIKORIMANA 
 
@@ -10,7 +12,7 @@
 **University:** Adventist University of Central Africa   
 **Academic Year:** 2025-2026, SEM I   
 **Group:** D on  Thursday   
-**Instructor:** Eric Maniraguha   
+**Instructor:** Eric Maniraguha (eric.maniraguha@auca.ac.rw)  
 
 ## Requirement
 
