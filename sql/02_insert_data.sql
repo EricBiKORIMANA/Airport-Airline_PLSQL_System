@@ -167,16 +167,16 @@ SELECT * FROM dual;
 
 -- SQL script to insert initial data into the holidays table
 INSERT ALL
-  INTO holidays VALUES ('Happy New Year Day',DATE '2024-01-01', 'Happy New Year Day')
-  INTO holidays VALUES ('Genocide against the Tutsi Memorial Day',DATE '2024-04-07', 'Genocide against the Tutsi Memorial Day')
-  INTO holidays VALUES ('Labor Day',DATE '2024-05-01', 'Labor Day')
-  INTO holidays VALUES ('Independence Day',DATE '2024-07-01', 'Independence Day')
-  INTO holidays VALUES ('Liberation Day',DATE '2024-07-04', 'Liberation Day')
-  INTO holidays VALUES ('Assumption Day',DATE '2024-08-15', 'Assumption Day')
-  INTO holidays VALUES ('National Heroes Day',DATE '2024-02-01', 'National Heroes Day')
-  INTO holidays VALUES ('Umuganura Day',DATE '2024-08-01', 'Umuganura Day')
-  INTO holidays VALUES ('Christmas Day',DATE '2024-12-25', 'Christmas Day')
-  INTO holidays VALUES ('Boxing Day',DATE '2024-12-26', 'Boxing Day')
+  INTO holidays VALUES ('Happy New Year Day',DATE '2024-01-01', 'Happy New Year Day','Y')
+  INTO holidays VALUES ('Genocide against the Tutsi Memorial Day',DATE '2024-04-07', 'Genocide against the Tutsi Memorial Day','Y')
+  INTO holidays VALUES ('Labor Day',DATE '2024-05-01', 'Labor Day','Y')
+  INTO holidays VALUES ('Independence Day',DATE '2024-07-01', 'Independence Day','Y')
+  INTO holidays VALUES ('Liberation Day',DATE '2024-07-04', 'Liberation Day','Y')
+  INTO holidays VALUES ('Assumption Day',DATE '2024-08-15', 'Assumption Day','Y')
+  INTO holidays VALUES ('National Heroes Day',DATE '2024-02-01', 'National Heroes Day','Y')
+  INTO holidays VALUES ('Umuganura Day',DATE '2024-08-01', 'Umuganura Day','Y')
+  INTO holidays VALUES ('Christmas Day',DATE '2024-12-25', 'Christmas Day','Y')
+  INTO holidays VALUES ('Boxing Day',DATE '2024-12-26', 'Boxing Day','Y')
 SELECT * FROM dual;
 
 COMMIT;
