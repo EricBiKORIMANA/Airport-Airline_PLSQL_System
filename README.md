@@ -1,24 +1,20 @@
-# Airport-Airline_PLSQL_System
-
 # PL/SQL Oracle Database Capstone Project
 
-## Identification
+## 👤 Identification
 
 **ID:** 27928     
-**Name:** Eric BIKORIMANA 
-
-**Course Details:**  
+**Name:** Eric BIKORIMANA     
 **Course:** INSY 8311 - Database Development with PL/SQL   
 **University:** Adventist University of Central Africa   
 **Academic Year:** 2025-2026, SEM I   
-**Group:** D on  Thursday   
-**Instructor:** Eric Maniraguha (eric.maniraguha@auca.ac.rw)  
+**Group:** D (Thursday)   
+**Instructor:** Eric Maniraguha(`eric.maniraguha@auca.ac.rw`)  
 
-## 1. Requirement
+## 1. ⚙️ Requirement
 
 | Tool | Category | Primary Purpose | Benefit |
 | :--- | :--- | :--- | :--- |
-| **Oracle 23c Database** | Database | The core database engine (use the **Free - Developer Release**). | Provides the latest features like JSON Relational Duality, and the target environment for PL/SQL execution. |
+| **Oracle 23c Database** | Database | The core database engine (use the **Free - Developer Release**). | Provides the latest features and the target environment for PL/SQL execution. |
 | **Docker** | Virtualization/Containerization | Packages the database and its dependencies into a lightweight, portable container. | **Quick setup** of a consistent local Oracle environment (e.g., using the `container-registry.oracle.com/database/free` image).  |
 | **SQL Developer** | IDE/GUI Tool | Graphical tool for database administration, development, and debugging. | **Best-in-class PL/SQL Debugger** and easy schema browsing. |
 | **VS Code** | Code Editor/IDE | Lightweight, highly extensible source code editor. | Excellent for writing and version-controlling PL/SQL scripts, using extensions like **Oracle Developer Tools for VS Code**. |
@@ -27,7 +23,7 @@
 
 
 
-## 2. Project Overview:
+## 2. 📝 Project Overview:
 
 ### **Title: Airport and Airline Management System**
 
@@ -44,7 +40,7 @@ Airport operations require managing complex relationships between flights, passe
 * Automate business processes using triggers and stored procedures
 
 
-## 3. Quick Start Guide
+## 3. 📋 Quick Start Guide
 
 To deploy this project, execute the scripts in the `sql/` folder in the following strict order:
 
@@ -55,14 +51,17 @@ To deploy this project, execute the scripts in the `sql/` folder in the followin
 5. `07_test_run.sql`: Contains test scripts and sample data operations to verify that all database objects (tables, procedures, functions, triggers) are working correctly in the airport and airline management system.
 
 
-## 4. Documentation Links
+## 4. 📑 Documentation Links
 
 * [Entity-Relationship (ER) Diagram](images/ER_Diagram.png): Represents the conceptual data model for an Airport and Airline Management System.
 * [Database Schema](images/Database_Schema.png): Represents the Physical Database Schema for the Airport and Airline Management System.
-<!-- * [Business Process Model (BPMN)]():  Visual workflow of 
+<!-- * [Business Process Model (BPMN)]():  Visual workflow of  -->
+* [Data dictionary](docs/data_dict.md): Documentation file that defines and describes all database tables, columns, data types and constraints.
+* [Image for Database Object](images/database_object): Directory containing organized SQL files that define and create all database components(tables, packages, procedures, functions, triggers).
+* [Images for test result](images/test_results): Directory containing output files, logs, and results from executing test scripts to verify the functionality.
 
 
-
+<!--
 ### ER Diagram
 
 This Entity-Relationship (ER) Diagram represents the conceptual data model for an Airport and Airline Management System. The system is designed to track and manage all aspects of air travel, including airlines, aircraft, flights, airports, bookings, passengers, and tickets. 
