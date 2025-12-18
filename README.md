@@ -2,7 +2,7 @@
 
 # PL/SQL Oracle Database Capstone Project
 
-## 👤 Identification
+## Identification
 
 **ID:** 27928     
 **Name:** Eric BIKORIMANA 
@@ -14,7 +14,7 @@
 **Group:** D on  Thursday   
 **Instructor:** Eric Maniraguha (eric.maniraguha@auca.ac.rw)  
 
-## Requirement
+## 1. Requirement
 
 | Tool | Category | Primary Purpose | Benefit |
 | :--- | :--- | :--- | :--- |
@@ -27,11 +27,9 @@
 
 
 
-## Project Details:
+## 2. Project Overview:
 
 ### **Title: Airport and Airline Management System**
-
-### Project Overview
 
 The **Airport and Airline Management System** aims to design and implement an integrated PL/SQL-based system to manage airport and airlines operation including flights scheduling, passenger bookings, aircrafts details, and ticketing. It ensures data consistency, automates core airport processes, and provides accurate information retrieval for management and passengers.
 
@@ -39,11 +37,31 @@ The **Airport and Airline Management System** aims to design and implement an in
 
 Airport operations require managing complex relationships between flights, passengers, aircraft, and bookings, which manual systems cannot efficiently handle, leading to errors and data inconsistency.
 
-## Project Objectives
+### Project Objectives
 
 * Design a normalized relational database for airport operations
 * Implement comprehensive PL/SQL components (packages, procedures, functions, triggers)
 * Automate business processes using triggers and stored procedures
+
+
+## 3. Quick Start Guide
+
+To deploy this project, execute the scripts in the `sql/` folder in the following strict order:
+
+1. `01_create_tables.sql`: Creates tables.
+2. `02_insert_data.sql`: populates 60+ test records.
+3. `05_package.sql`: Compiles the `airport_mgmt_pkg` package containing all Procedures and Functions.
+4. `06_triggers.sql`: Contains database triggers that automatically execute actions when data changes occur (INSERT, UPDATE, DELETE) to enforce business rules and maintain data integrity in the system.
+5. `07_test_run.sql`: Contains test scripts and sample data operations to verify that all database objects (tables, procedures, functions, triggers) are working correctly in the airport and airline management system.
+
+
+## 4. Documentation Links
+
+* [Entity-Relationship (ER) Diagram](images/ER_Diagram.png): Represents the conceptual data model for an Airport and Airline Management System.
+* [Database Schema](images/Database_Schema.png): Represents the Physical Database Schema for the Airport and Airline Management System.
+<!-- * [Business Process Model (BPMN)]():  Visual workflow of 
+
+
 
 ### ER Diagram
 
@@ -63,4 +81,4 @@ This diagram represents the Physical Database Schema for the Airport and Airline
 
 
 **Author:** BIKORIMANA Eric    
-<!-- **Date:** 2025-12-18 -->
+**Date:** 2025-12-18 -->
