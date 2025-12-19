@@ -1,4 +1,4 @@
-# PL/SQL Oracle Database Capstone Project
+# Airport and Airline Management System(Oracle PL/SQL Capstone)
 
 ## 👤 Identification
 
@@ -9,6 +9,8 @@
 **Academic Year:** 2025-2026, SEM I   
 **Group:** D (Thursday)   
 **Instructor:** Eric Maniraguha(`eric.maniraguha@auca.ac.rw`)  
+
+---
 
 ## 1. ⚙️ Requirement
 
@@ -21,7 +23,58 @@
 | **draw.io (or diagrams.net)** | Diagramming | Cloud-based and desktop tool for creating visual diagrams. | **Visualizing database schemas** (ERDs), process flows, and PL/SQL package dependencies. |
 | **MS PowerPoint** | Presentation | Tool for creating slide presentations. | **Documenting and presenting** PL/SQL designs, architectural diagrams (often generated from draw.io), and training materials. |
 
+---
 
+## Repository Structure
+
+Folder and file Structure:
+ * `sql/`: Contains the SQL codes(Tables + Data + Package + Triggers).
+ *  `docs/`:
+      * `data_dict.md`: Detailed metadata of all tables.
+      *  `thu_27928_eric_airportMS_presentation.pptx`: Project Presentation.
+ *  `images/`: Evidence of successful test runs.
+     * `database_object/`: Contains images evidence for database objects.
+     * `test_result`: Contains images evidence for test results.
+     * `Database_Schema.png`: Database Schema Diagram.
+     * `ER_Diagram.png`: Entity Relationship Diagram.
+     * `ticket_booking_process.png`: Business Process Swimlane Diagrams.
+  * `business_intelligence/`: Analytical queries
+    
+
+---
+
+### Step 1: Create the Database Container
+
+Run this as the SYS/SYSTEM user to set up the Pluggable Database (PDB):
+
+```sql
+-- Create PDB 
+CREATE PLUGGABLE DATABASE thu_27928_eric_aiportMS_db
+ADMIN USER eric IDENTIFIED BY eric
+FILE_NAME_CONVERT = (
+'/opt/oracle/oradata/FREE/pdbseed/',
+' /opt/oracle/oradata/FREE/thu_27928_eric_aiportMS_db/'
+);
+
+ALTER PLUGGABLE DATABASE thu_27928_eric_aiportMS_db OPEN READ;
+
+ALTER PLUGGABLE DATABASE thu_27928_eric_aiportMS_db SAVE;
+
+-- Enter to thu_27928_eric_aiportMS_db PDB
+ALTER SESSION SET CONTAINER = thu_27928_eric_aiportMS_db;
+
+-- Grant Priviliges to user
+GRANT ALL PRIVILEGES TO eric;
+
+```
+
+### Step 2: Deploy the Schema
+
+1. Open SQL Developer.
+2. Connect as `eric` (Password: `eric`).
+3. Run the script located in: `sql/`.
+
+---
 
 ## 2. 📝 Project Overview:
 
@@ -39,6 +92,7 @@ Airport operations require managing complex relationships between flights, passe
 * Implement comprehensive PL/SQL components (packages, procedures, functions, triggers)
 * Automate business processes using triggers and stored procedures
 
+---
 
 ## 3. 📋 Quick Start Guide
 
@@ -50,34 +104,16 @@ To deploy this project, execute the scripts in the `sql/` folder in the followin
 4. `06_triggers.sql`: Contains database triggers that automatically execute actions when data changes occur (INSERT, UPDATE, DELETE) to enforce business rules and maintain data integrity in the system.
 5. `07_test_run.sql`: Contains test scripts and sample data operations to verify that all database objects (tables, procedures, functions, triggers) are working correctly in the airport and airline management system.
 
+---
 
 ## 4. 📑 Documentation Links
 
 * [Entity-Relationship (ER) Diagram](images/ER_Diagram.png): Represents the conceptual data model for an Airport and Airline Management System.
 * [Database Schema](images/Database_Schema.png): Represents the Physical Database Schema for the Airport and Airline Management System.
 * [Business Process Model (BPMN)](images/ticket_booking_process.png):  Visual workflow of Ticket booking process.
+* [PL/SQL System Presentation](docs/thu_27928_eric_airportMS_presentation.pptx): Project Presentation. 
 * [Data dictionary](docs/data_dict.md): Documentation file that defines and describes all database tables, columns, data types and constraints.
+* [Business Intelligence](business_intelligence/): Analytical queries
 * [Image for Database Object](images/database_object): Directory containing organized SQL files that define and create all database components(tables, packages, procedures, functions, triggers).
 * [Images for test result](images/test_results): Directory containing output files, logs, and results from executing test scripts to verify the functionality.
 
-
-<!--
-### ER Diagram
-
-This Entity-Relationship (ER) Diagram represents the conceptual data model for an Airport and Airline Management System. The system is designed to track and manage all aspects of air travel, including airlines, aircraft, flights, airports, bookings, passengers, and tickets. 
-[Here](docs/data_dict.md) for more description
-
-![ER diagram](images/ER_Diagram.png)
-
-### Database schema
-
-This diagram represents the Physical Database Schema for the Airport and Airline Management System, which is implemented using an Oracle database and managed extensively via PL/SQL stored procedures, functions, and triggers. [Here](docs/data_dict.md) for data dictionary.
-
-![Database schema diagram](images/Database_Schema.png)
-
-
-
-
-
-**Author:** BIKORIMANA Eric    
-**Date:** 2025-12-18 -->
