@@ -2,7 +2,6 @@
 
 ## Airport & Airline Management System (PL/SQL)
 
----
 
 ## 1. Introduction
 
@@ -42,13 +41,11 @@ The BI system aims to:
 How many passengers and bookings occur each day?
 
 **Metrics:**
-
 - Travel Date
 - Total Passengers
 - Total Confirmed Bookings
 
 **Business Value:**
-
 - Identifies peak travel days
 - Improves airport staffing and capacity planning
 
@@ -74,21 +71,18 @@ ORDER BY travel_date DESC;
 Which flight routes generate the highest revenue?
 
 **Metrics:**
-
 * Total Revenue
 * Total Bookings
 * Average Ticket Price
 * Minimum and Maximum Ticket Price
 
 **Dimensions:**
-
 * Departure Airport
 * Arrival Airport
 * Departure Country
 * Arrival Country
 
 **Business Value:**
-
 * Identifies profitable routes
 * Supports pricing and route planning decisions
 
@@ -113,18 +107,15 @@ JOIN airports arr ON f.arrival_airport = arr.airport_id
 WHERE b.status = 'CONFIRMED'
 GROUP BY dep.name, arr.name, dep.country, arr.country
 ORDER BY total_revenue DESC;
-
 ```
 
 
 ### 🔹 Requirement 3: Booking Trends & Cancellation Analysis
 
 **Business Question:**
-
 What are the booking and cancellation patterns over time?
 
 Metrics:
-
 * Total Bookings
 * Confirmed Bookings
 * Cancelled Bookings
@@ -132,41 +123,34 @@ Metrics:
 * Total Revenue
 * Average Booking Value
 
-  **Business Value:**
+**Business Value:**
+* Detects seasonal trends
+* Helps reduce cancellations
+* Improves marketing and promotions
 
-  * Detects seasonal trends
-  * Helps reduce cancellations
-  * Improves marketing and promotions
+**Analytical Query:**
 
-  **Analytical Query:**
+```sql
+SELECT 
+    TO_CHAR(b.booking_date, 'Day') AS day_of_week,
+    TO_CHAR(b.booking_date, 'Month') AS month_name,
+    EXTRACT(MONTH FROM b.booking_date) AS month_number,
+    COUNT(b.booking_id) AS total_bookings,
+    SUM(CASE WHEN b.status = 'CONFIRMED' THEN 1 ELSE 0 END) AS confirmed_bookings,
+    SUM(CASE WHEN b.status = 'CANCELLED' THEN 1 ELSE 0 END) AS cancelled_bookings,
+    ROUND(SUM(CASE WHEN b.status = 'CANCELLED' THEN 1 ELSE 0 END) / COUNT(b.booking_id) * 100, 2) AS cancellation_rate,
+    SUM(t.total_amount) AS total_revenue,
+    ROUND(AVG(t.total_amount), 2) AS avg_booking_value
+FROM bookings b
+LEFT JOIN tickets t ON b.booking_id = t.booking_id
+WHERE b.booking_date >= ADD_MONTHS(SYSDATE, -6)  -- Last 6 months
+GROUP BY TO_CHAR(b.booking_date, 'Day'), TO_CHAR(b.booking_date, 'Month'), EXTRACT(MONTH FROM b.booking_date)
+ORDER BY month_number, day_of_week;
+```
 
-  ```sql
-  SELECT 
-      TO_CHAR(b.booking_date, 'Day') AS day_of_week,
-      TO_CHAR(b.booking_date, 'Month') AS month_name,
-      EXTRACT(MONTH FROM b.booking_date) AS month_number,
-      COUNT(b.booking_id) AS total_bookings,
-      SUM(CASE WHEN b.status = 'CONFIRMED' THEN 1 ELSE 0 END) AS confirmed_bookings,
-      SUM(CASE WHEN b.status = 'CANCELLED' THEN 1 ELSE 0 END) AS cancelled_bookings,
-      ROUND(
-          SUM(CASE WHEN b.status = 'CANCELLED' THEN 1 ELSE 0 END) 
-          / COUNT(b.booking_id) * 100, 
-          2
-      ) AS cancellation_rate,
-      SUM(t.total_amount) AS total_revenue,
-      ROUND(AVG(t.total_amount), 2) AS avg_booking_value
-  FROM bookings b
-  LEFT JOIN tickets t ON b.booking_id = t.booking_id
-  WHERE b.booking_date >= ADD_MONTHS(SYSDATE, -6)
-  GROUP BY 
-      TO_CHAR(b.booking_date, 'Day'),
-      TO_CHAR(b.booking_date, 'Month'),
-      EXTRACT(MONTH FROM b.booking_date)
-  ORDER BY month_number, day_of_week;
+---
 
-  ```
-
-  ### Key Performance Indicators (KPIs)
+ ## 5. Key Performance Indicators (KPIs)
 
 | KPI                   | Description               |
 | --------------------- | ------------------------- |
@@ -179,5 +163,3 @@ Metrics:
 
 
 
-
-kks
