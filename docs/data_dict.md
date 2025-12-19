@@ -805,7 +805,7 @@ END IF;
 * Unknown users: BLOCKED
 
 ---
-
+<!--
 ### 4. Weekend & Holiday Restriction Triggers (4 triggers)
 
 #### TRG_WEEKEND_HOLIDAY_RESTRICTION (BOOKINGS)
@@ -845,4 +845,4 @@ END IF;
 
 * TRG_WEEKEND_HOLIDAY_RESTRICTION (bookings)
 * TRG_FLIGHTS_WEEKEND_HOLIDAY_RESTRICT (flights)
-* TRG_TICKETS_WEEKEND_HOLIDAY
+* TRG_TICKETS_WEEKEND_HOLIDAY -->
