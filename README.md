@@ -55,7 +55,7 @@ To deploy this project, execute the scripts in the `sql/` folder in the followin
 
 * [Entity-Relationship (ER) Diagram](images/ER_Diagram.png): Represents the conceptual data model for an Airport and Airline Management System.
 * [Database Schema](images/Database_Schema.png): Represents the Physical Database Schema for the Airport and Airline Management System.
-<!-- * [Business Process Model (BPMN)]():  Visual workflow of  -->
+* [Business Process Model (BPMN)](images/ticket_booking_process.png):  Visual workflow of Ticket booking process.
 * [Data dictionary](docs/data_dict.md): Documentation file that defines and describes all database tables, columns, data types and constraints.
 * [Image for Database Object](images/database_object): Directory containing organized SQL files that define and create all database components(tables, packages, procedures, functions, triggers).
 * [Images for test result](images/test_results): Directory containing output files, logs, and results from executing test scripts to verify the functionality.
